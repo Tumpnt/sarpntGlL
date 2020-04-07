@@ -180,6 +180,9 @@ define('game',['gl-matrix', 'time', 'shader', 'mesh', 'texture', 'material','inp
 
             //Time
             this.time = new Time();
+		
+		//input
+		this.input = new Input();
 
             //Shaders
             var shader = new Shader(gl);
@@ -208,7 +211,7 @@ define('game',['gl-matrix', 'time', 'shader', 'mesh', 'texture', 'material','inp
         }
 
         update(dt) {
-			Input.update();
+			this.input.update();
 
             this.gl.clearColor(0.0, 0.0, 0.0, 1.0);
             this.gl.clearDepth(1.0);
