@@ -1,4 +1,4 @@
-define('game',['gl-matrix', 'time', 'shader', 'mesh', 'texture', 'material'], function (glMatrix, Time, Shader, Mesh, Texture, Material) {
+define('game',['gl-matrix', 'time', 'shader', 'mesh', 'texture', 'material','input'], function (glMatrix, Time, Shader, Mesh, Texture, Material,Input) {
     class Game {
         constructor() {
             // Create Canvas
@@ -208,6 +208,8 @@ define('game',['gl-matrix', 'time', 'shader', 'mesh', 'texture', 'material'], fu
         }
 
         update(dt) {
+			Input.update();
+
             this.gl.clearColor(0.0, 0.0, 0.0, 1.0);
             this.gl.clearDepth(1.0);
             this.gl.enable(this.gl.DEPTH_TEST);
