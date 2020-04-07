@@ -1,7 +1,7 @@
 requirejs.config({
     baseUrl: 'js',
     paths: {
-        'gl-matrix': '/lib/gl-matrix-min',
+        'gl-matrix': 'lib/gl-matrix-min',
         'main': 'main',
 
         //Core
